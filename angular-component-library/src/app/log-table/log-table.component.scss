@@ -1,0 +1,32 @@
+$mat-base-row-height: 52px;
+$mat-base-header-height: $mat-base-row-height + 4px;
+/* TODO is there a preset variable for this??? */
+$font-size: 16px;
+
+.table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .header {
+        font-weight: bold;
+        padding-top: ($mat-base-header-height - $font-size) / 2; 
+        padding-bottom: ($mat-base-header-height - $font-size) / 2; 
+    }
+
+    .item, .header {
+        border: 1px solid black;
+        border-right: none;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .item {
+        border-top: none;
+        padding-top: ($mat-base-row-height - $font-size ) / 2; 
+        padding-bottom: ($mat-base-row-height - $font-size) / 2; 
+    }
+
+    .header.last, .item.last {
+        border-right: 1px solid black;
+    }
+}

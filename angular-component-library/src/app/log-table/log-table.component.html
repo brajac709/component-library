@@ -1,0 +1,10 @@
+<div class="table">
+    <div class="header">Column 1</div>
+    <div class="header">Column 2</div>
+    <div class="header last">Column 3</div>
+    <ng-container *ngFor="let d of data">
+        <div class="item">{{d.data1}}</div>
+        <div class="item">{{d.data2}}</div>
+        <div class="item last">{{d.data3}}</div>
+    </ng-container>
+</div>
