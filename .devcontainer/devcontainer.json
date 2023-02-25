@@ -1,0 +1,11 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "forwardPorts": [6006],
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/angular-cli:2": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "cd angular-component-library && npm install && echo '{\"version\": 1, \"cli\":{ \"completion\":{\"prompted\":true}}}' > /home/codespace/.angular-config.json && echo 'source <(ng completion source)' >> /home/codespace/.bashrc",
+  "postStartCommand": "cd angular-component-library && ng build"
+}
