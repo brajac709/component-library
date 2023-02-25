@@ -5,6 +5,6 @@
       "version": "latest"
     }
   },
-  "postCreateCommand": "npm install",
-  "postStartCommand": "ng build && npm run storybook"
+  "postCreateCommand": "cd angular-component-library && npm install",
+  "postStartCommand": "cd angular-component-library && ng build && npm run storybook"
 }
