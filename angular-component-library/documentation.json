@@ -400,7 +400,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "$mat-base-row-height: 52px;\r\n$mat-base-header-height: $mat-base-row-height + 4px;\r\n\r\n.table {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n\r\n    .header {\r\n        font-weight: bold;\r\n        height:  $mat-base-header-height;\r\n    }\r\n\r\n    .item, .header {\r\n        border: 1px solid black;\r\n        border-right: none;\r\n        padding-left: 16px;\r\n        padding-right: 16px;\r\n    }\r\n\r\n    .item {\r\n        border-top: none;\r\n        height: $mat-base-row-height;\r\n    }\r\n\r\n    .header.last, .item.last {\r\n        border-right: 1px solid black;\r\n    }\r\n}\r\n",
+                    "data": "$mat-base-row-height: 52px;\r\n$mat-base-header-height: $mat-base-row-height + 4px;\r\n/* TODO is there a preset variable for this??? */\r\n$font-size: 16px;\r\n\r\n.table {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n\r\n    .header {\r\n        font-weight: bold;\r\n        padding-top: ($mat-base-header-height - $font-size) / 2; \r\n        padding-bottom: ($mat-base-header-height - $font-size) / 2; \r\n    }\r\n\r\n    .item, .header {\r\n        border: 1px solid black;\r\n        border-right: none;\r\n        padding-left: 16px;\r\n        padding-right: 16px;\r\n    }\r\n\r\n    .item {\r\n        border-top: none;\r\n        padding-top: ($mat-base-row-height - $font-size ) / 2; \r\n        padding-bottom: ($mat-base-row-height - $font-size) / 2; \r\n    }\r\n\r\n    .header.last, .item.last {\r\n        border-right: 1px solid black;\r\n    }\r\n}\r\n",
                     "styleUrl": "./log-table.component.scss"
                 }
             ],
@@ -831,7 +831,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/test-slide-toggle/test-slide-toggle.stories.ts",
+                "file": "src/app/teststory/teststory.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -841,7 +841,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/teststory/teststory.stories.ts",
+                "file": "src/app/test-slide-toggle/test-slide-toggle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -930,21 +930,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/test-slide-toggle/test-slide-toggle.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<TestSlideToggleComponent>",
-                "defaultValue": "(args: TestSlideToggleComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/teststory/teststory.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<TeststoryComponent>",
                 "defaultValue": "(args: TeststoryComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/test-slide-toggle/test-slide-toggle.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TestSlideToggleComponent>",
+                "defaultValue": "(args: TestSlideToggleComponent) => ({\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -1156,28 +1156,6 @@
                     "defaultValue": "(args: LogTableComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
-            "src/app/test-slide-toggle/test-slide-toggle.stories.ts": [
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/test-slide-toggle/test-slide-toggle.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/test-slide-toggle/test-slide-toggle.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<TestSlideToggleComponent>",
-                    "defaultValue": "(args: TestSlideToggleComponent) => ({\r\n  props: args,\r\n})"
-                }
-            ],
             "src/app/teststory/teststory.stories.ts": [
                 {
                     "name": "Primary",
@@ -1198,6 +1176,28 @@
                     "deprecationMessage": "",
                     "type": "Story<TeststoryComponent>",
                     "defaultValue": "(args: TeststoryComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/test-slide-toggle/test-slide-toggle.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/test-slide-toggle/test-slide-toggle.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/test-slide-toggle/test-slide-toggle.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TestSlideToggleComponent>",
+                    "defaultValue": "(args: TestSlideToggleComponent) => ({\r\n  props: args,\r\n})"
                 }
             ]
         },
