@@ -4,5 +4,7 @@
     "ghcr.io/devcontainers-contrib/features/angular-cli:2": {
       "version": "latest"
     }
-  }
+  },
+  "postCreateCommand": "npm install",
+  "postStartCommand": "ng build && npm run storybook"
 }
