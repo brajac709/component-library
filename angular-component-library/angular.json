@@ -104,20 +104,20 @@
         "storybook": {
           "builder": "@storybook/angular:start-storybook",
           "options": {
-            "browserTarget": "angular-cli:build",
+            "browserTarget": "angular-component-library:build",
             "port": 6666
           }
         },
         "build-storybook": {
           "builder": "@storybook/angular:build-storybook",
           "options": {
-            "browserTarget": "angular-cli:build"
+            "browserTarget": "angular-component-library:build"
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "fb133473-e76c-4e34-96e5-3f8e57eae5bd"
+    "analytics": "false"
   }
 }
