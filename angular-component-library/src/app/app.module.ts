@@ -17,7 +17,7 @@ import { LayoutModule } from '@angular/cdk/layout';
   declarations: [
     AppComponent,
     TeststoryComponent,
-    DashboardComponent
+    //DashboardComponent
   ],
   imports: [
     BrowserModule,
