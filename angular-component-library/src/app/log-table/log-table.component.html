@@ -1,10 +1,13 @@
-<div class="table">
-    <div class="header">Column 1</div>
-    <div class="header">Column 2</div>
-    <div class="header last">Column 3</div>
+<div class="table" [style.grid-template-columns]="'1fr '.repeat(headers().length)">
+    <ng-container *ngFor="let h of headers(); index as i">
+        <div class="header" [class.last]="i == headers().length - 1">{{h}}</div>
+    </ng-container>
     <ng-container *ngFor="let d of data">
-        <div class="item">{{d.data1}}</div>
-        <div class="item">{{d.data2}}</div>
-        <div class="item last">{{d.data3}}</div>
+        <ng-container *ngFor="let h of headers(); index as i">
+            <ng-template #emptyCol>
+                <div class="item" [class.last]="i == headers().length - 1"></div>
+            </ng-template>
+            <div *ngIf="d.hasOwnProperty(h); else emptyCol" class="item" [class.last]="i == headers().length - 1">{{d[h]}}</div>
+        </ng-container>
     </ng-container>
 </div>

@@ -27,4 +27,8 @@ export class LogTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  headers() {
+    return Object.keys(this.data[0]);
+  }
+
 }
