@@ -22,6 +22,8 @@ export class LogTableComponent implements OnInit {
     }
   ]
 
+  @Input() columnWeights : number[] = [1,1,1]
+
   constructor() { }
 
   ngOnInit(): void {
@@ -29,6 +31,21 @@ export class LogTableComponent implements OnInit {
 
   headers() {
     return Object.keys(this.data[0]);
+  }
+
+  gridTemplateStyle() {
+    const numHeaders = this.headers().length;
+
+    if (this.columnWeights.length < numHeaders)
+    {
+      const newArr = Array(numHeaders - this.columnWeights.length).fill(1);
+      this.columnWeights.splice(this.columnWeights.length,0, ...newArr);
+    }
+
+    const columnWeights = this.columnWeights.slice(0, numHeaders);
+
+    const style = "".concat(...columnWeights.map(x => `${x}fr `));
+    return style;
   }
 
 }

@@ -37,7 +37,8 @@ Primary.args = {
       data2: "data 2",
       data3: "data 3",
     }
-  ]
+  ],
+  columnWeights: [1,1,1]
 };
 
 export const LongText = Template.bind({});
@@ -59,7 +60,8 @@ LongText.args = {
       data2: "data 2",
       data3: "data 3",
     }
-  ]
+  ],
+  columnWeights: [1,2,1]
 };
 
 /*

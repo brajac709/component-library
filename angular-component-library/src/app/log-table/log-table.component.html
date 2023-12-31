@@ -1,4 +1,4 @@
-<div class="table" [style.grid-template-columns]="'1fr '.repeat(headers().length)">
+<div class="table" [style.grid-template-columns]="gridTemplateStyle()">
     <ng-container *ngFor="let h of headers(); index as i">
         <div class="header" [class.last]="i == headers().length - 1">{{h}}</div>
     </ng-container>
